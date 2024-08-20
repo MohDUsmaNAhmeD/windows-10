@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Windows 10</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="desktop-icons">
+      <!-- Desktop icons will be dynamically added here -->
+    </div>
+
+    <div class="taskbar">
+      <div class="start-menu">
+        <img
+          src="https://webstockreview.net/images/windows-start-button-png-8.png"
+          alt="Start"
+          onclick="toggleStartMenu()"
+        />
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search" />
+      </div>
+      <div class="taskbar-icons">
+        <img
+          src="https://th.bing.com/th/id/R.15317f39b369ebfe56a357aaea4860ab?rik=i1CnFnr0QPpDYg&pid=ImgRaw&r=0"
+          alt="Edge"
+          onclick="openApp('Microsoft Edge')"
+        />
+        <img
+          src="https://th.bing.com/th/id/R.43f0d00b776b1f58eac8404e04e8c260?rik=Ea8QXOT12kAZDQ&pid=ImgRaw&r=0"
+          alt="Mail"
+          onclick="openApp('Mail')"
+        />
+        <img
+          src="https://th.bing.com/th/id/R.68859d1a014a1bd67e3fa063d41148a3?rik=dWWdh73VjLk2lQ&riu=http%3a%2f%2fclipart-library.com%2fimages_k%2fyoutube-transparent-png%2fyoutube-transparent-png-15.png&ehk=rZ%2fw10rk3IJdEPBB8ZqssrEApBJLMz%2bJig5nsYs9BqE%3d&risl=&pid=ImgRaw&r=0"
+          alt="YouTube"
+          onclick="openApp('YouTube')"
+        />
+        <img
+          src="https://www.pngall.com/wp-content/uploads/4/Settings-PNG-Free-Download.png"
+          alt="Settings"
+          onclick="openApp('Settings')"
+        />
+      </div>
+      <div class="system-icons">
+        <div class="wifi" title="WiFi"></div>
+        <div class="volume" title="Volume"></div>
+        <div class="battery" title="Battery"></div>
+        <div class="time" id="current-time"></div>
+      </div>
+    </div>
+
+    <div class="app-window" id="app-window">
+      <div class="title-bar">
+        <span id="app-title"></span>
+        <div class="controls">
+          <div class="minimize" onclick="minimizeApp()">&minus;</div>
+          <div class="maximize" onclick="maximizeApp()">&#9633;</div>
+          <div class="close" onclick="closeApp()">&times;</div>
+        </div>
+      </div>
+      <div class="content" id="app-content"></div>
+    </div>
+
+    <div class="start-menu-panel" id="start-menu-panel">
+      <h2>Start</h2>
+      <ul class="app-list" id="start-menu-apps">
+        <!-- Start menu apps will be dynamically added here -->
+      </ul>
+    </div>
+  <script src="script.js"></script>
+  </body>
+</html>
